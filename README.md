@@ -2,6 +2,4 @@ Olá, bem vindo ao meu Portfólio, aqui você vai encontrar vários dos meus pro
 
 Me chamo Luan Martins Lorenzato, sou desenvolvedor web e mobile.
 
-Entra neste primeiro index.html para me conhecer melhor.
-
 Obrigado.
