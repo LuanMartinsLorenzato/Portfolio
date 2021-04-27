@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Rich-text editor</title>
+
+    <!--Styles File-->
+    <link rel="stylesheet" href="./style.css">
+
+    <!--Js File-->
+    <script src="./app.js"></script>
+    
+    <!--Fonte-->
+    <script src="https://kit.fontawesome.com/c155228422.js" crossorigin="anonymous"></script>
+</head>
+<body onload="enableEditMode();">
+
+    <div class="divStyle">
+
+        <div class="header">
+
+            <select class="selectStyle" onchange="execCommandWithArg('fontName', this.value)">
+
+                <option value="Comic Sans">Comic Sans</option>
+                <option value="Arial">Arial</option>
+                <option value="Courier">Courier</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Tahoma">Tahoma</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Verdana">Verdana</option>
+                
+            </select>
+
+            <select class="selectStyle" onchange="execCommandWithArg('fontSize', this.value)">
+
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+
+            </select>
+
+            <button class="btn" onclick="execCmd('bold');"><i class="fa fa-bold"></i></button>
+            <button class="btn" onclick="execCmd('italic');"><i class="fa fa-italic"></i></button>
+            <button class="btn" onclick="execCmd('underline');"><i class="fa fa-underline"></i></button>
+            <button class="btn" onclick="execCmd('strikeThrough');"><i class="fa fa-strikethrough"></i></button>
+            <button class="btn" onclick="execCmd('justifyLeft');"><i class="fa fa-align-left"></i></button>
+            <button class="btn" onclick="execCmd('justifyCenter');"><i class="fa fa-align-center"></i></button>
+            <button class="btn" onclick="execCmd('justifyRight');"><i class="fa fa-align-right"></i></button>
+            <button class="btn" onclick="execCmd('justifyFull');"><i class="fa fa-align-justify"></i></button>
+            <button class="btn" onclick="execCmd('cut');"><i class="fa fa-cut"></i></button>
+            <button class="btn" onclick="execCmd('copy');"><i class="fa fa-copy"></i></button>
+            <button class="btn" onclick="execCmd('paste');"><i class="fas fa-paste"></i></button>
+            <button class="btn" onclick="execCmd('indent');"><i class="fa fa-indent"></i></button>
+            <button class="btn" onclick="execCmd('outdent');"><i class="fa fa-dedent"></i></button>
+            <button class="btn" onclick="execCmd('subscript');"><i class="fa fa-subscript"></i></button>
+            <button class="btn" onclick="execCmd('superscript');"><i class="fa fa-superscript"></i></button>
+            <button class="btn" onclick="execCmd('undo');"><i class="fa fa-undo"></i></button>
+            <button class="btn" onclick="execCmd('redo');"><i class="fa fa-repeat"></i></button>
+            <button class="btn" onclick="execCmd('insertUnorderedList');"><i class="fa fa-list-ul"></i></button>
+            <button class="btn" onclick="execCmd('insertOrderedList');"><i class="fa fa-list-ol"></i></button>
+            <button class="btn" onclick="execCmd('insertParagraph');"><i class="fa fa-paragraph"></i></button>
+
+            <select class="selectStyle" onchange="execCommandWithArg('formatBlock', this.value)">
+
+                <option value="H1">H1</option>
+                <option value="H2">H2</option>
+                <option value="H3">H3</option>
+                <option value="H4">H4</option>
+                <option value="H5">H5</option>
+                <option value="H6">H6</option>
+
+            </select>
+
+            <button class="btn" onclick="execCmd('insertHorizontalRule');">HR</button>
+            <button class="btn" onclick="execCmd('createLink', prompt('Enter a URL', 'http://'));"><i class="fa fa-link"></i></button>
+            <button class="btn" onclick="execCmd('unlink');"><i class="fa fa-unlink"></i></button>
+            <button class="btn" onclick="toggleSource();"><i class="fa fa-code"></i></button>
+            <button class="btn" onclick="execCommandWithArg('insertImage', prompt('Enter the image URL', ''));"><i class="fa fa-file-image-o"></i></button>
+            <button class="btn" onclick="toggleEdit();">Toggle Edit</button>
+            <button class="btn" onclick="execCmd('selectAll');">Selec All</button>
+
+            <br>
+
+           <div>
+
+            Font Color: <input class="btn" type="color" onchange="execCommandWithArg('foreColor', this.value)">
+
+            Font Background: <input class="btn"  type="color" onchange="execCommandWithArg('hiliteColor', this.value)">
+
+            </div>
+
+        </div>
+
+       <iframe name="richTextField" class="iframe">
+
+            <p>Seu navegador não suporta este recurso!! :(</p>
+
+            <p>Atualize para uma versão mais recente ou escolha outro navegador</p>
+
+        </iframe>
+
+    </div>
+
+</body>
+
+</html>
