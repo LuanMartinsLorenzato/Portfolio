@@ -1,0 +1,57 @@
+.divStyle
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.45);
+    border: none;
+
+}
+
+.header
+{
+    background-color:  #ebebeb;
+    padding: 5px;
+}
+
+.header .selectStyle 
+{
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.header .selectStyle:focus
+{
+    outline: 0px auto -webkit-focus-ring-color;
+}
+
+.header .btn
+{
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    padding: 3px;
+    margin: 2px;
+    transition: box-shadow 0.1s ease, transform 0.2s ease;
+}
+
+.header .btn:focus
+{
+    outline: 0px auto -webkit-focus-ring-color;
+}
+
+.header .btn:active
+{
+    box-shadow: inset 1px 1px 0 1px  #a8a8a8 ;
+    background-color: #cccccc;
+    transform: translate(-0.5px, 0.5px);
+}
+
+.iframe 
+{   
+    width: 1000px; 
+    height: 500px;
+    padding: 20px;
+    border: none;
+}
